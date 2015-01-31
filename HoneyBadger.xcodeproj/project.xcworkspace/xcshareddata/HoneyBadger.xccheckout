@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6E4D7277-78B7-4FF5-B6D9-F22A66F27090</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HoneyBadger</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>021213F42E1F86E25BE760B5DAC4668B70689086</key>
+		<string>https://github.com/stefanp312/honeybadger.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HoneyBadger.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>021213F42E1F86E25BE760B5DAC4668B70689086</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/stefanp312/honeybadger.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>021213F42E1F86E25BE760B5DAC4668B70689086</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>021213F42E1F86E25BE760B5DAC4668B70689086</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HoneyBadger</string>
+		</dict>
+	</array>
+</dict>
+</plist>

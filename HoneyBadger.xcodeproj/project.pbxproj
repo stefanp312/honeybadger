@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33CCB5461A7CA8E600458057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5451A7CA8E600458057 /* main.m */; };
+		33CCB5491A7CA8E600458057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5481A7CA8E600458057 /* AppDelegate.m */; };
+		33CCB54C1A7CA8E600458057 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB54B1A7CA8E600458057 /* FirstViewController.m */; };
+		33CCB54F1A7CA8E600458057 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB54E1A7CA8E600458057 /* SecondViewController.m */; };
+		33CCB5521A7CA8E600458057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5501A7CA8E600458057 /* Main.storyboard */; };
+		33CCB5541A7CA8E600458057 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5531A7CA8E600458057 /* Images.xcassets */; };
+		33CCB5571A7CA8E600458057 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5551A7CA8E600458057 /* LaunchScreen.xib */; };
+		33CCB5631A7CA8E600458057 /* HoneyBadgerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5621A7CA8E600458057 /* HoneyBadgerTests.m */; };
+		33CCB56E1A7CB0F500458057 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB56D1A7CB0F500458057 /* NavigationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33CCB55D1A7CA8E600458057 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33CCB5381A7CA8E600458057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33CCB53F1A7CA8E600458057;
+			remoteInfo = HoneyBadger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33CCB5401A7CA8E600458057 /* HoneyBadger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoneyBadger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33CCB5441A7CA8E600458057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33CCB5451A7CA8E600458057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33CCB5471A7CA8E600458057 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		33CCB5481A7CA8E600458057 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		33CCB54A1A7CA8E600458057 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		33CCB54B1A7CA8E600458057 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		33CCB54D1A7CA8E600458057 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		33CCB54E1A7CA8E600458057 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		33CCB5511A7CA8E600458057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33CCB5531A7CA8E600458057 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		33CCB5561A7CA8E600458057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		33CCB55C1A7CA8E600458057 /* HoneyBadgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoneyBadgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33CCB5611A7CA8E600458057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33CCB5621A7CA8E600458057 /* HoneyBadgerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoneyBadgerTests.m; sourceTree = "<group>"; };
+		33CCB56C1A7CB0F500458057 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		33CCB56D1A7CB0F500458057 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33CCB53D1A7CA8E600458057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33CCB5591A7CA8E600458057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33CCB5371A7CA8E600458057 = {
+			isa = PBXGroup;
+			children = (
+				33CCB5421A7CA8E600458057 /* HoneyBadger */,
+				33CCB55F1A7CA8E600458057 /* HoneyBadgerTests */,
+				33CCB5411A7CA8E600458057 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33CCB5411A7CA8E600458057 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33CCB5401A7CA8E600458057 /* HoneyBadger.app */,
+				33CCB55C1A7CA8E600458057 /* HoneyBadgerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33CCB5421A7CA8E600458057 /* HoneyBadger */ = {
+			isa = PBXGroup;
+			children = (
+				33CCB5471A7CA8E600458057 /* AppDelegate.h */,
+				33CCB5481A7CA8E600458057 /* AppDelegate.m */,
+				33CCB54A1A7CA8E600458057 /* FirstViewController.h */,
+				33CCB54B1A7CA8E600458057 /* FirstViewController.m */,
+				33CCB54D1A7CA8E600458057 /* SecondViewController.h */,
+				33CCB54E1A7CA8E600458057 /* SecondViewController.m */,
+				33CCB5501A7CA8E600458057 /* Main.storyboard */,
+				33CCB5531A7CA8E600458057 /* Images.xcassets */,
+				33CCB5551A7CA8E600458057 /* LaunchScreen.xib */,
+				33CCB5431A7CA8E600458057 /* Supporting Files */,
+				33CCB56C1A7CB0F500458057 /* NavigationController.h */,
+				33CCB56D1A7CB0F500458057 /* NavigationController.m */,
+			);
+			path = HoneyBadger;
+			sourceTree = "<group>";
+		};
+		33CCB5431A7CA8E600458057 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33CCB5441A7CA8E600458057 /* Info.plist */,
+				33CCB5451A7CA8E600458057 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33CCB55F1A7CA8E600458057 /* HoneyBadgerTests */ = {
+			isa = PBXGroup;
+			children = (
+				33CCB5621A7CA8E600458057 /* HoneyBadgerTests.m */,
+				33CCB5601A7CA8E600458057 /* Supporting Files */,
+			);
+			path = HoneyBadgerTests;
+			sourceTree = "<group>";
+		};
+		33CCB5601A7CA8E600458057 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33CCB5611A7CA8E600458057 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33CCB53F1A7CA8E600458057 /* HoneyBadger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33CCB5661A7CA8E600458057 /* Build configuration list for PBXNativeTarget "HoneyBadger" */;
+			buildPhases = (
+				33CCB53C1A7CA8E600458057 /* Sources */,
+				33CCB53D1A7CA8E600458057 /* Frameworks */,
+				33CCB53E1A7CA8E600458057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoneyBadger;
+			productName = HoneyBadger;
+			productReference = 33CCB5401A7CA8E600458057 /* HoneyBadger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33CCB55B1A7CA8E600458057 /* HoneyBadgerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33CCB5691A7CA8E600458057 /* Build configuration list for PBXNativeTarget "HoneyBadgerTests" */;
+			buildPhases = (
+				33CCB5581A7CA8E600458057 /* Sources */,
+				33CCB5591A7CA8E600458057 /* Frameworks */,
+				33CCB55A1A7CA8E600458057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33CCB55E1A7CA8E600458057 /* PBXTargetDependency */,
+			);
+			name = HoneyBadgerTests;
+			productName = HoneyBadgerTests;
+			productReference = 33CCB55C1A7CA8E600458057 /* HoneyBadgerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33CCB5381A7CA8E600458057 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Stefan Pleava";
+				TargetAttributes = {
+					33CCB53F1A7CA8E600458057 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					33CCB55B1A7CA8E600458057 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 33CCB53F1A7CA8E600458057;
+					};
+				};
+			};
+			buildConfigurationList = 33CCB53B1A7CA8E600458057 /* Build configuration list for PBXProject "HoneyBadger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33CCB5371A7CA8E600458057;
+			productRefGroup = 33CCB5411A7CA8E600458057 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33CCB53F1A7CA8E600458057 /* HoneyBadger */,
+				33CCB55B1A7CA8E600458057 /* HoneyBadgerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33CCB53E1A7CA8E600458057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33CCB5521A7CA8E600458057 /* Main.storyboard in Resources */,
+				33CCB5571A7CA8E600458057 /* LaunchScreen.xib in Resources */,
+				33CCB5541A7CA8E600458057 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33CCB55A1A7CA8E600458057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33CCB53C1A7CA8E600458057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33CCB54F1A7CA8E600458057 /* SecondViewController.m in Sources */,
+				33CCB5491A7CA8E600458057 /* AppDelegate.m in Sources */,
+				33CCB56E1A7CB0F500458057 /* NavigationController.m in Sources */,
+				33CCB54C1A7CA8E600458057 /* FirstViewController.m in Sources */,
+				33CCB5461A7CA8E600458057 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33CCB5581A7CA8E600458057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33CCB5631A7CA8E600458057 /* HoneyBadgerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33CCB55E1A7CA8E600458057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33CCB53F1A7CA8E600458057 /* HoneyBadger */;
+			targetProxy = 33CCB55D1A7CA8E600458057 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33CCB5501A7CA8E600458057 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33CCB5511A7CA8E600458057 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		33CCB5551A7CA8E600458057 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33CCB5561A7CA8E600458057 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33CCB5641A7CA8E600458057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33CCB5651A7CA8E600458057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33CCB5671A7CA8E600458057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HoneyBadger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		33CCB5681A7CA8E600458057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HoneyBadger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		33CCB56A1A7CA8E600458057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HoneyBadgerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoneyBadger.app/HoneyBadger";
+			};
+			name = Debug;
+		};
+		33CCB56B1A7CA8E600458057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HoneyBadgerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoneyBadger.app/HoneyBadger";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33CCB53B1A7CA8E600458057 /* Build configuration list for PBXProject "HoneyBadger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CCB5641A7CA8E600458057 /* Debug */,
+				33CCB5651A7CA8E600458057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33CCB5661A7CA8E600458057 /* Build configuration list for PBXNativeTarget "HoneyBadger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CCB5671A7CA8E600458057 /* Debug */,
+				33CCB5681A7CA8E600458057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		33CCB5691A7CA8E600458057 /* Build configuration list for PBXNativeTarget "HoneyBadgerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CCB56A1A7CA8E600458057 /* Debug */,
+				33CCB56B1A7CA8E600458057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33CCB5381A7CA8E600458057 /* Project object */;
+}
