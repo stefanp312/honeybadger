@@ -1,5 +1,5 @@
 //
-//  ComposeViewController.h
+//  TextViewController.h
 //  HoneyBadger
 //
 //  Created by Stefan Pleava on 2015-01-31.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ComposeViewController : UIViewController <UITextViewDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *promptLabel;
+@interface TextViewController : UIViewController
+
+@property UITextView* textView;
+
 
 @end

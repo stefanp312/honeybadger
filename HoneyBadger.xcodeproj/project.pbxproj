@@ -23,6 +23,8 @@
 		33CCB58A1A7D192500458057 /* mainFeedPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5891A7D192500458057 /* mainFeedPageCell.xib */; };
 		33CCB58F1A7D27EC00458057 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB58E1A7D27EC00458057 /* BlogPost.m */; };
 		33CCB5911A7D343B00458057 /* blogPost.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5901A7D343B00458057 /* blogPost.xib */; };
+		33CE32BE1A7D6FB600A15B03 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CE32BD1A7D6FB600A15B03 /* TextViewController.m */; };
+		33CE32C61A7D733000A15B03 /* ComposeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CE32C51A7D733000A15B03 /* ComposeScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,9 @@
 		33CCB58D1A7D27EC00458057 /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
 		33CCB58E1A7D27EC00458057 /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
 		33CCB5901A7D343B00458057 /* blogPost.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = blogPost.xib; sourceTree = "<group>"; };
+		33CE32BC1A7D6FB600A15B03 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		33CE32BD1A7D6FB600A15B03 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
+		33CE32C51A7D733000A15B03 /* ComposeScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +158,7 @@
 				33CCB5701A7CBA7800458057 /* HomeViewController.m */,
 				33CCB5751A7CC09100458057 /* ComposeViewController.h */,
 				33CCB5761A7CC09100458057 /* ComposeViewController.m */,
+				33CE32C51A7D733000A15B03 /* ComposeScreen.xib */,
 				33CCB5781A7CC0BD00458057 /* SettingViewController.h */,
 				33CCB5791A7CC0BD00458057 /* SettingViewController.m */,
 				33CCB57B1A7CC0F500458057 /* SearchViewController.h */,
@@ -172,6 +178,8 @@
 				33CCB5901A7D343B00458057 /* blogPost.xib */,
 				33CCB58D1A7D27EC00458057 /* BlogPost.h */,
 				33CCB58E1A7D27EC00458057 /* BlogPost.m */,
+				33CE32BC1A7D6FB600A15B03 /* TextViewController.h */,
+				33CE32BD1A7D6FB600A15B03 /* TextViewController.m */,
 			);
 			name = HelperViews;
 			sourceTree = "<group>";
@@ -259,6 +267,7 @@
 				33CCB5521A7CA8E600458057 /* Main.storyboard in Resources */,
 				33CCB5571A7CA8E600458057 /* LaunchScreen.xib in Resources */,
 				33CCB5541A7CA8E600458057 /* Images.xcassets in Resources */,
+				33CE32C61A7D733000A15B03 /* ComposeScreen.xib in Resources */,
 				33CCB5911A7D343B00458057 /* blogPost.xib in Resources */,
 				33CCB58A1A7D192500458057 /* mainFeedPageCell.xib in Resources */,
 			);
@@ -286,6 +295,7 @@
 				33CCB5771A7CC09100458057 /* ComposeViewController.m in Sources */,
 				33CCB5711A7CBA7800458057 /* HomeViewController.m in Sources */,
 				33CCB57D1A7CC0F500458057 /* SearchViewController.m in Sources */,
+				33CE32BE1A7D6FB600A15B03 /* TextViewController.m in Sources */,
 				33CCB5741A7CBF6D00458057 /* ProfileViewController.m in Sources */,
 				33CCB58F1A7D27EC00458057 /* BlogPost.m in Sources */,
 			);
