@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		33CCB5461A7CA8E600458057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5451A7CA8E600458057 /* main.m */; };
 		33CCB5491A7CA8E600458057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5481A7CA8E600458057 /* AppDelegate.m */; };
-		33CCB54C1A7CA8E600458057 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB54B1A7CA8E600458057 /* FirstViewController.m */; };
-		33CCB54F1A7CA8E600458057 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB54E1A7CA8E600458057 /* SecondViewController.m */; };
 		33CCB5521A7CA8E600458057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5501A7CA8E600458057 /* Main.storyboard */; };
 		33CCB5541A7CA8E600458057 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5531A7CA8E600458057 /* Images.xcassets */; };
 		33CCB5571A7CA8E600458057 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5551A7CA8E600458057 /* LaunchScreen.xib */; };
 		33CCB5631A7CA8E600458057 /* HoneyBadgerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5621A7CA8E600458057 /* HoneyBadgerTests.m */; };
 		33CCB56E1A7CB0F500458057 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB56D1A7CB0F500458057 /* NavigationController.m */; };
+		33CCB5711A7CBA7800458057 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5701A7CBA7800458057 /* HomeViewController.m */; };
+		33CCB5741A7CBF6D00458057 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5731A7CBF6D00458057 /* ProfileViewController.m */; };
+		33CCB5771A7CC09100458057 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5761A7CC09100458057 /* ComposeViewController.m */; };
+		33CCB57A1A7CC0BD00458057 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5791A7CC0BD00458057 /* SettingViewController.m */; };
+		33CCB57D1A7CC0F500458057 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB57C1A7CC0F500458057 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +37,6 @@
 		33CCB5451A7CA8E600458057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33CCB5471A7CA8E600458057 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33CCB5481A7CA8E600458057 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		33CCB54A1A7CA8E600458057 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		33CCB54B1A7CA8E600458057 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		33CCB54D1A7CA8E600458057 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		33CCB54E1A7CA8E600458057 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		33CCB5511A7CA8E600458057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33CCB5531A7CA8E600458057 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		33CCB5561A7CA8E600458057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +45,16 @@
 		33CCB5621A7CA8E600458057 /* HoneyBadgerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoneyBadgerTests.m; sourceTree = "<group>"; };
 		33CCB56C1A7CB0F500458057 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		33CCB56D1A7CB0F500458057 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		33CCB56F1A7CBA7800458057 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		33CCB5701A7CBA7800458057 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		33CCB5721A7CBF6D00458057 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		33CCB5731A7CBF6D00458057 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		33CCB5751A7CC09100458057 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		33CCB5761A7CC09100458057 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		33CCB5781A7CC0BD00458057 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		33CCB5791A7CC0BD00458057 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		33CCB57B1A7CC0F500458057 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		33CCB57C1A7CC0F500458057 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,18 +96,24 @@
 		33CCB5421A7CA8E600458057 /* HoneyBadger */ = {
 			isa = PBXGroup;
 			children = (
+				33CCB5721A7CBF6D00458057 /* ProfileViewController.h */,
+				33CCB5731A7CBF6D00458057 /* ProfileViewController.m */,
 				33CCB5471A7CA8E600458057 /* AppDelegate.h */,
 				33CCB5481A7CA8E600458057 /* AppDelegate.m */,
-				33CCB54A1A7CA8E600458057 /* FirstViewController.h */,
-				33CCB54B1A7CA8E600458057 /* FirstViewController.m */,
-				33CCB54D1A7CA8E600458057 /* SecondViewController.h */,
-				33CCB54E1A7CA8E600458057 /* SecondViewController.m */,
 				33CCB5501A7CA8E600458057 /* Main.storyboard */,
 				33CCB5531A7CA8E600458057 /* Images.xcassets */,
 				33CCB5551A7CA8E600458057 /* LaunchScreen.xib */,
 				33CCB5431A7CA8E600458057 /* Supporting Files */,
 				33CCB56C1A7CB0F500458057 /* NavigationController.h */,
 				33CCB56D1A7CB0F500458057 /* NavigationController.m */,
+				33CCB56F1A7CBA7800458057 /* HomeViewController.h */,
+				33CCB5701A7CBA7800458057 /* HomeViewController.m */,
+				33CCB5751A7CC09100458057 /* ComposeViewController.h */,
+				33CCB5761A7CC09100458057 /* ComposeViewController.m */,
+				33CCB5781A7CC0BD00458057 /* SettingViewController.h */,
+				33CCB5791A7CC0BD00458057 /* SettingViewController.m */,
+				33CCB57B1A7CC0F500458057 /* SearchViewController.h */,
+				33CCB57C1A7CC0F500458057 /* SearchViewController.m */,
 			);
 			path = HoneyBadger;
 			sourceTree = "<group>";
@@ -229,11 +244,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33CCB54F1A7CA8E600458057 /* SecondViewController.m in Sources */,
 				33CCB5491A7CA8E600458057 /* AppDelegate.m in Sources */,
 				33CCB56E1A7CB0F500458057 /* NavigationController.m in Sources */,
-				33CCB54C1A7CA8E600458057 /* FirstViewController.m in Sources */,
 				33CCB5461A7CA8E600458057 /* main.m in Sources */,
+				33CCB57A1A7CC0BD00458057 /* SettingViewController.m in Sources */,
+				33CCB5771A7CC09100458057 /* ComposeViewController.m in Sources */,
+				33CCB5711A7CBA7800458057 /* HomeViewController.m in Sources */,
+				33CCB57D1A7CC0F500458057 /* SearchViewController.m in Sources */,
+				33CCB5741A7CBF6D00458057 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +444,7 @@
 				33CCB5681A7CA8E600458057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33CCB5691A7CA8E600458057 /* Build configuration list for PBXNativeTarget "HoneyBadgerTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +453,7 @@
 				33CCB56B1A7CA8E600458057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
