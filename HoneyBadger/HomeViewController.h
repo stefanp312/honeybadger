@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BlogPost.h"
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <UICollectionViewDataSource,UICollectionViewDelegate>
+
+@property UICollectionView* pageFeed;
+@property UICollectionViewCell* pageFeedCells;
+
+@property UIView* authorFooter;
+
+@property NSMutableArray* pageArray;
+
+@property BlogPost* currentPost;
+
 
 @end

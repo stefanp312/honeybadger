@@ -19,6 +19,10 @@
 		33CCB5771A7CC09100458057 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5761A7CC09100458057 /* ComposeViewController.m */; };
 		33CCB57A1A7CC0BD00458057 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5791A7CC0BD00458057 /* SettingViewController.m */; };
 		33CCB57D1A7CC0F500458057 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB57C1A7CC0F500458057 /* SearchViewController.m */; };
+		33CCB5821A7D0D3200458057 /* MainFeedPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5811A7D0D3200458057 /* MainFeedPageCell.m */; };
+		33CCB58A1A7D192500458057 /* mainFeedPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5891A7D192500458057 /* mainFeedPageCell.xib */; };
+		33CCB58F1A7D27EC00458057 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB58E1A7D27EC00458057 /* BlogPost.m */; };
+		33CCB5911A7D343B00458057 /* blogPost.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5901A7D343B00458057 /* blogPost.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,12 @@
 		33CCB5791A7CC0BD00458057 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		33CCB57B1A7CC0F500458057 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		33CCB57C1A7CC0F500458057 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		33CCB5801A7D0D3200458057 /* MainFeedPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainFeedPageCell.h; sourceTree = "<group>"; };
+		33CCB5811A7D0D3200458057 /* MainFeedPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedPageCell.m; sourceTree = "<group>"; };
+		33CCB5891A7D192500458057 /* mainFeedPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mainFeedPageCell.xib; sourceTree = "<group>"; };
+		33CCB58D1A7D27EC00458057 /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
+		33CCB58E1A7D27EC00458057 /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
+		33CCB5901A7D343B00458057 /* blogPost.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = blogPost.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +106,8 @@
 		33CCB5421A7CA8E600458057 /* HoneyBadger */ = {
 			isa = PBXGroup;
 			children = (
-				33CCB5721A7CBF6D00458057 /* ProfileViewController.h */,
-				33CCB5731A7CBF6D00458057 /* ProfileViewController.m */,
+				33CCB57F1A7D063300458057 /* HelperViews */,
+				33CCB57E1A7CF94B00458057 /* MainScreens */,
 				33CCB5471A7CA8E600458057 /* AppDelegate.h */,
 				33CCB5481A7CA8E600458057 /* AppDelegate.m */,
 				33CCB5501A7CA8E600458057 /* Main.storyboard */,
@@ -106,14 +116,6 @@
 				33CCB5431A7CA8E600458057 /* Supporting Files */,
 				33CCB56C1A7CB0F500458057 /* NavigationController.h */,
 				33CCB56D1A7CB0F500458057 /* NavigationController.m */,
-				33CCB56F1A7CBA7800458057 /* HomeViewController.h */,
-				33CCB5701A7CBA7800458057 /* HomeViewController.m */,
-				33CCB5751A7CC09100458057 /* ComposeViewController.h */,
-				33CCB5761A7CC09100458057 /* ComposeViewController.m */,
-				33CCB5781A7CC0BD00458057 /* SettingViewController.h */,
-				33CCB5791A7CC0BD00458057 /* SettingViewController.m */,
-				33CCB57B1A7CC0F500458057 /* SearchViewController.h */,
-				33CCB57C1A7CC0F500458057 /* SearchViewController.m */,
 			);
 			path = HoneyBadger;
 			sourceTree = "<group>";
@@ -142,6 +144,36 @@
 				33CCB5611A7CA8E600458057 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33CCB57E1A7CF94B00458057 /* MainScreens */ = {
+			isa = PBXGroup;
+			children = (
+				33CCB56F1A7CBA7800458057 /* HomeViewController.h */,
+				33CCB5701A7CBA7800458057 /* HomeViewController.m */,
+				33CCB5751A7CC09100458057 /* ComposeViewController.h */,
+				33CCB5761A7CC09100458057 /* ComposeViewController.m */,
+				33CCB5781A7CC0BD00458057 /* SettingViewController.h */,
+				33CCB5791A7CC0BD00458057 /* SettingViewController.m */,
+				33CCB57B1A7CC0F500458057 /* SearchViewController.h */,
+				33CCB57C1A7CC0F500458057 /* SearchViewController.m */,
+				33CCB5721A7CBF6D00458057 /* ProfileViewController.h */,
+				33CCB5731A7CBF6D00458057 /* ProfileViewController.m */,
+			);
+			name = MainScreens;
+			sourceTree = "<group>";
+		};
+		33CCB57F1A7D063300458057 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				33CCB5801A7D0D3200458057 /* MainFeedPageCell.h */,
+				33CCB5811A7D0D3200458057 /* MainFeedPageCell.m */,
+				33CCB5891A7D192500458057 /* mainFeedPageCell.xib */,
+				33CCB5901A7D343B00458057 /* blogPost.xib */,
+				33CCB58D1A7D27EC00458057 /* BlogPost.h */,
+				33CCB58E1A7D27EC00458057 /* BlogPost.m */,
+			);
+			name = HelperViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +259,8 @@
 				33CCB5521A7CA8E600458057 /* Main.storyboard in Resources */,
 				33CCB5571A7CA8E600458057 /* LaunchScreen.xib in Resources */,
 				33CCB5541A7CA8E600458057 /* Images.xcassets in Resources */,
+				33CCB5911A7D343B00458057 /* blogPost.xib in Resources */,
+				33CCB58A1A7D192500458057 /* mainFeedPageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,12 +280,14 @@
 			files = (
 				33CCB5491A7CA8E600458057 /* AppDelegate.m in Sources */,
 				33CCB56E1A7CB0F500458057 /* NavigationController.m in Sources */,
+				33CCB5821A7D0D3200458057 /* MainFeedPageCell.m in Sources */,
 				33CCB5461A7CA8E600458057 /* main.m in Sources */,
 				33CCB57A1A7CC0BD00458057 /* SettingViewController.m in Sources */,
 				33CCB5771A7CC09100458057 /* ComposeViewController.m in Sources */,
 				33CCB5711A7CBA7800458057 /* HomeViewController.m in Sources */,
 				33CCB57D1A7CC0F500458057 /* SearchViewController.m in Sources */,
 				33CCB5741A7CBF6D00458057 /* ProfileViewController.m in Sources */,
+				33CCB58F1A7D27EC00458057 /* BlogPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
