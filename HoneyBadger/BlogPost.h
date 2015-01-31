@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *mainTitle;
 @property (weak, nonatomic) IBOutlet UIView *mainView;
 
+@property NSDictionary* data;
+
 @end

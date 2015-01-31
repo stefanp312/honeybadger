@@ -39,6 +39,7 @@
                            @"Title": @"That Title Man",
                            @"Subtitle": @"Wow Header Too",
                            @"Image": @1,
+                           @"Body": @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam felis tortor, lacinia id malesuada sagittis, sodales non nulla. Ut aliquam, nibh eu laoreet tincidunt, orci mauris fermentum massa, id lobortis dui dui vitae diam. Nulla commodo efficitur ante at dignissim. In quam nulla, tristique non congue a, rutrum in odio. Donec non dignissim risus, quis iaculis arcu. Nullam feugiat, justo sit amet interdum bibendum, nibh erat vestibulum risus, ac faucibus enim lorem id ante. Curabitur at ante vulputate, auctor ligula quis, fermentum lacus. Curabitur egestas bibendum lectus id pretium. Quisque sollicitudin ultricies libero, eu ornare velit blandit posuere. Phasellus in accumsan risus. Phasellus at metus erat. Nulla quis tortor non erat facilisis fermentum."
                            };
     self.pageArray = [NSArray arrayWithObjects:myPage,myPage,myPage, nil].mutableCopy;
 
@@ -50,7 +51,9 @@
                              @"Title": @"That Title Man",
                              @"Subtitle": @"Wow Header Too",
                              @"Image": @1,
+                             @"Body": @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam felis tortor, lacinia id malesuada sagittis, sodales non nulla. Ut aliquam, nibh eu laoreet tincidunt, orci mauris fermentum massa, id lobortis dui dui vitae diam. Nulla commodo efficitur ante at dignissim. In quam nulla, tristique non congue a, rutrum in odio. Donec non dignissim risus, quis iaculis arcu. Nullam feugiat, justo sit amet interdum bibendum, nibh erat vestibulum risus, ac faucibus enim lorem id ante. Curabitur at ante vulputate, auctor ligula quis, fermentum lacus. Curabitur egestas bibendum lectus id pretium. Quisque sollicitudin ultricies libero, eu ornare velit blandit posuere. Phasellus in accumsan risus. Phasellus at metus erat. Nulla quis tortor non erat facilisis fermentum."
                              };
+
     self.pageArray = [NSArray arrayWithObjects:myPage,myPage,myPage, nil].mutableCopy;
     
 }
@@ -96,6 +99,7 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     self.currentPost = [[BlogPost alloc]initWithNibName:@"blogPost" bundle:nil];
+    self.currentPost.data = [self.pageArray objectAtIndex:indexPath.row] ;
     NSLog(@"working");
     [self presentViewController:self.currentPost animated:YES completion:nil];
     //custom animations could happen here if there is time

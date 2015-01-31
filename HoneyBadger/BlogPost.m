@@ -18,21 +18,39 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UISwipeGestureRecognizer *swipeUpDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-    [swipeUpDown setDirection:(UISwipeGestureRecognizerDirectionUp | UISwipeGestureRecognizerDirectionDown )];
-    [self.view addGestureRecognizer:swipeUpDown];
+    UIScreenEdgePanGestureRecognizer *leftEdge = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+    leftEdge.edges = UIRectEdgeLeft;
+    
+    UIScreenEdgePanGestureRecognizer *rightEdge = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+    rightEdge.edges = UIRectEdgeRight;
+    
+    [self.view addGestureRecognizer:leftEdge];
+    [self.view addGestureRecognizer:rightEdge];
+    
+    NSLog(@"%@",self.data);
+    self.mainTitle.text = [self.data valueForKey:@"Title"];
+    self.subTitle.text = [self.data valueForKey:@"Subtitle"];
+
+    self.subTitle.backgroundColor = [UIColor grayColor];
+    self.body.text = [self.data valueForKey:@"Body"];
+    
+
     
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
--(void)handleGesture:(UIGestureRecognizer*)gr{
-    NSLog(@"yolo");
+-(void)handleGesture:(UIScreenEdgePanGestureRecognizer*)gr{
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+- (IBAction)handleEdgePan:(id)sender {
     
 }
 /*
