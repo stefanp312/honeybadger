@@ -14,14 +14,28 @@
     
     
     self.tabBarController.title = self.title;
-    //self.bodyField.delegate = self;
+    self.bodyTextField.delegate = self;
     self.promptLabel.text = [self getPrompt];
-    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStyleDone target:self action:@selector(doneBarButtonItemClicked)];
-    
+    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(nextBarButtonItemClicked)];
+
+
     
 }
 
 #pragma marks -Get Prompt
+- (IBAction)hasTitle:(UITextField*)sender {
+    if (![sender.text isEqualToString:@""]) {
+        self.hasTitle=true;
+    }
+    [sender resignFirstResponder];
+}
+- (IBAction)hasSubtitle:(UITextField *)sender {
+    if (![sender.text isEqualToString:@""]) {
+        self.hasSubtitle=true;
+    }
+    [sender resignFirstResponder];
+}
+
 
 -(NSString*)getPrompt{
     NSString* aString = @"YOLO";
@@ -31,19 +45,26 @@
 #pragma mark - UITextViewDelegate
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
-    // Provide a "Done" button for the user to select to signify completion with writing text in the text view.
-    UIBarButtonItem *doneBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneBarButtonItemClicked)];
     
-    [self.navigationItem setRightBarButtonItem:doneBarButtonItem animated:YES];
 }
 
 #pragma mark - Actions
 
 - (void)doneBarButtonItemClicked{
     // Dismiss the keyboard by removing it as the first responder.
-    //[self.bodyField resignFirstResponder];
+    [self.bodyTextField resignFirstResponder];
     
-    [self.navigationItem setRightBarButtonItem:nil animated:YES];
+    [self.tabBarController.navigationItem setRightBarButtonItem:nil animated:YES];
+}
+- (void)nextBarButtonItemClicked{
+    // Dismiss the keyboard by removing it as the first responder.
+
+    
+    if ((self.hasSubtitle)&&(self.hasTitle)) {
+        [self.tabBarController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStyleDone target:self action:@selector(doneBarButtonItemClicked)]
+ animated:YES];
+    }
+    
 }
 
 

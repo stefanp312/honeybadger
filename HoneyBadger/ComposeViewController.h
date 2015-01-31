@@ -10,5 +10,14 @@
 
 @interface ComposeViewController : UIViewController <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *promptLabel;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *subtitileTextField;
+@property (weak, nonatomic) IBOutlet UITextView *bodyTextField;
+
+@property BOOL hasTitle;
+@property BOOL hasSubtitle;
+@property BOOL hasBody;
+
+
 
 @end
