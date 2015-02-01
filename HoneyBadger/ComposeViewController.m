@@ -55,25 +55,30 @@
 
 #pragma mark - UITextViewDelegate
 
-- (void)textViewDidBeginEditing:(UITextView *)textView {
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self animateTextField:textField up:YES];
+    [textField becomeFirstResponder];
+}
+
+-(void)animateTextField:(UITextField*)textField up:(BOOL)up
+{
+    const int movementDistance = -130; // tweak as needed
+    const float movementDuration = 0.3f; // tweak as needed
     
-    TextViewController* textViewController = [[TextViewController alloc] init];
-    [textView resignFirstResponder];
-    //[self.navigationController pushViewController:textViewController animated:YES];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:textViewController];
-    //[nc.navigationBar]
-    [self presentViewController:nc animated:YES completion:^{
-        
-        self.bodyTextField.text = textViewController.textView.text;
-    }
-    ];
+    int movement = (up ? movementDistance : -movementDistance);
     
-    
+    [UIView beginAnimations: @"animateTextField" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     
     [self.bodyTextField resignFirstResponder];
+    [self animateTextField:textField up:NO];
     
 }
 
@@ -91,7 +96,31 @@
 - (void)doneBarButtonItemClicked{
     // Dismiss the keyboard by removing it as the first responder.
     [self.bodyTextField resignFirstResponder];
-    [self makePost];
+    if ((![self.titleTextField.text isEqualToString:@""])&&(![self.subtitileTextField.text isEqualToString:@""])&&(![self.bodyTextField.text isEqualToString:@""])) {
+        [self makePost];
+    }else if([self.titleTextField.text isEqualToString:@""]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oh no..."
+                                                        message:@"You must have a title to make a post."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+        [alert show];
+    }else if([self.subtitileTextField.text isEqualToString:@""]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oh no..."
+                                                        message:@"You must have a subtitle to make a post."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    else if([self.bodyTextField.text isEqualToString:@""]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oh no..."
+                                                        message:@"You must write something!"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
     
 }
 

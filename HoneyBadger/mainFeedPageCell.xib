@@ -16,15 +16,15 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3q7-WI-Xh5">
                         <rect key="frame" x="0.0" y="0.0" width="231" height="205"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-o9-g9e">
-                        <rect key="frame" x="8" y="176" width="207" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-o9-g9e">
+                        <rect key="frame" x="16" y="168" width="207" height="21"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kq-9r-qpt">
-                        <rect key="frame" x="8" y="8" width="207" height="160"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kq-9r-qpt">
+                        <rect key="frame" x="16" y="8" width="207" height="160"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="30"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                         <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -32,11 +32,6 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <constraints>
-                <constraint firstItem="iaI-o9-g9e" firstAttribute="leading" secondItem="tIQ-hg-dks" secondAttribute="leading" constant="20" id="0Th-Zz-cBB"/>
-                <constraint firstAttribute="bottom" secondItem="iaI-o9-g9e" secondAttribute="bottom" constant="20" id="N9D-5V-XKT"/>
-                <constraint firstItem="9kq-9r-qpt" firstAttribute="leading" secondItem="tIQ-hg-dks" secondAttribute="leading" constant="20" id="nUW-aw-m9f"/>
-            </constraints>
             <size key="customSize" width="223" height="205"/>
             <connections>
                 <outlet property="imageView" destination="3q7-WI-Xh5" id="TtY-Xo-hxA"/>

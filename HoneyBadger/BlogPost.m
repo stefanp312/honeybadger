@@ -37,14 +37,10 @@
     self.subTitle.text = [self.data valueForKey:@"subtitle"];
     self.mainTitle.layer.cornerRadius = 5;
     self.subTitle.layer.cornerRadius = 5;
-    self.mainTitle.layer.borderWidth = 10;
-    self.subTitle.layer.borderWidth = 10;
-    self.mainTitle.layer.borderColor = self.mainTitle.backgroundColor.CGColor;
-    //self.mainTitle.layer.layer =
-    self.subTitle.layer.borderColor = self.subTitle.backgroundColor.CGColor;
     [self.mainTitle.layer setMasksToBounds:YES];
     [self.subTitle.layer setMasksToBounds:YES];
     self.body.text = [self.data valueForKey:@"textContent"];
+    self.promptLabel.text =[[self.data valueForKey:@"prompt"] valueForKey:@"content"];
     //[self.textView sizeToFit];
     
     
