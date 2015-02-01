@@ -10,7 +10,7 @@
 
 @interface BlogPost : UIViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UILabel *body;
+@property (weak, nonatomic) IBOutlet UITextView *body;
 @property (weak, nonatomic) IBOutlet UILabel *promptLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *subTitle;

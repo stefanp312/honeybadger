@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		339A7BE61A7E309900465C99 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339A7BE51A7E309900465C99 /* Login.xib */; };
 		339A7BE91A7E31C400465C99 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339A7BE81A7E31C400465C99 /* LoginController.m */; };
+		339A7BEB1A7E6F5700465C99 /* tableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339A7BEA1A7E6F5700465C99 /* tableCell.xib */; };
 		33CCB5461A7CA8E600458057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5451A7CA8E600458057 /* main.m */; };
 		33CCB5491A7CA8E600458057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5481A7CA8E600458057 /* AppDelegate.m */; };
 		33CCB5521A7CA8E600458057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5501A7CA8E600458057 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		339A7BE51A7E309900465C99 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		339A7BE71A7E31C400465C99 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		339A7BE81A7E31C400465C99 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		339A7BEA1A7E6F5700465C99 /* tableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tableCell.xib; sourceTree = "<group>"; };
 		33CCB5401A7CA8E600458057 /* HoneyBadger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoneyBadger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CCB5441A7CA8E600458057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CCB5451A7CA8E600458057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				339A7BE51A7E309900465C99 /* Login.xib */,
 				339A7BE71A7E31C400465C99 /* LoginController.h */,
 				339A7BE81A7E31C400465C99 /* LoginController.m */,
+				339A7BEA1A7E6F5700465C99 /* tableCell.xib */,
 			);
 			name = HelperViews;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				339A7BE61A7E309900465C99 /* Login.xib in Resources */,
 				33CCB5911A7D343B00458057 /* blogPost.xib in Resources */,
 				33CCB58A1A7D192500458057 /* mainFeedPageCell.xib in Resources */,
+				339A7BEB1A7E6F5700465C99 /* tableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

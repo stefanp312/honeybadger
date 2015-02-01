@@ -110,7 +110,7 @@
                             <constraint firstItem="m9I-qU-IKz" firstAttribute="top" secondItem="Wnf-HG-qbU" secondAttribute="bottom" id="z0v-hm-ouV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="first" id="S7P-WR-bjf"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="S7P-WR-bjf"/>
                     <connections>
                         <outlet property="Bio" destination="HHe-ii-poK" id="ZnM-Wh-8mY"/>
                         <outlet property="contentPicker" destination="Go8-Gu-D3x" id="uMA-AC-taC"/>
@@ -140,55 +140,15 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xAM-VK-UaY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DmO-gz-IPh">
                                 <rect key="frame" x="0.0" y="108" width="600" height="443"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="x2h-oX-5fR">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x2h-oX-5fR" id="ebO-KG-AzK">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TBI-MS-MgB">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TBI-MS-MgB" id="zJH-jx-fcV">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PHB-Qn-lcS">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PHB-Qn-lcS" id="4lc-2D-BUb">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ebx-uu-bvk">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ebx-uu-bvk" id="fzQ-TE-nQs">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hZD-iF-foF">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZD-iF-foF" id="1mf-Hp-rT7">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="hiv-cv-5UI"/>
-                                    <outlet property="delegate" destination="9pv-A4-QxB" id="2mW-e1-RDn"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="xAM-VK-UaY" secondAttribute="centerX" id="IqF-6T-DAF"/>
                             <constraint firstAttribute="centerX" secondItem="95f-aA-XJG" secondAttribute="centerX" id="QzU-y8-gLI"/>
-                            <constraint firstItem="xAM-VK-UaY" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="dbr-IV-dqC"/>
                             <constraint firstItem="95f-aA-XJG" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ejV-wj-T9U"/>
-                            <constraint firstItem="95f-aA-XJG" firstAttribute="bottom" secondItem="xAM-VK-UaY" secondAttribute="top" id="gJ2-v9-2QC"/>
-                            <constraint firstItem="95f-aA-XJG" firstAttribute="leading" secondItem="xAM-VK-UaY" secondAttribute="leading" id="jtx-ha-dLa"/>
                             <constraint firstItem="95f-aA-XJG" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="zbf-fT-7hO"/>
                         </constraints>
                     </view>
@@ -196,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="600"/>
+            <point key="canvasLocation" x="996" y="648"/>
         </scene>
         <!--Compose-->
         <scene sceneID="wg7-f3-ORb">
@@ -352,7 +312,7 @@
                             <constraint firstItem="zFw-eq-APn" firstAttribute="leading" secondItem="lT4-Vf-1TJ" secondAttribute="leading" id="zbA-bm-oD3"/>
                         </constraints>
                     </scrollView>
-                    <tabBarItem key="tabBarItem" title="Compose" image="first" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Compose" image="first" selectedImage="second" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -399,7 +359,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="first" id="Fru-D2-Vdg"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="first" selectedImage="first" id="Fru-D2-Vdg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAb-vc-Akn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -448,5 +408,6 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
     </resources>
 </document>

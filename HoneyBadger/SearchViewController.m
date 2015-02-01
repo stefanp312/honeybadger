@@ -8,12 +8,14 @@
 
 #import "SearchViewController.h"
 
-@implementation SearchViewController
+@implementation SearchViewController 
 
 -(void)viewDidAppear:(BOOL)animated{
     
     self.tabBarController.title = self.title;
     
+    
 }
+
 
 @end

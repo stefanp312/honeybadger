@@ -40,17 +40,17 @@
     [self.mainTitle.layer setMasksToBounds:YES];
     [self.subTitle.layer setMasksToBounds:YES];
     self.body.text = [self.data valueForKey:@"textContent"];
+    [self.body sizeToFit];
     self.promptLabel.text =[[self.data valueForKey:@"prompt"] valueForKey:@"content"];
     //[self.textView sizeToFit];
-    
-    
-    
-    
 
     
     
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [self.body sizeToFit];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -68,11 +68,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-
-- (IBAction)handleEdgePan:(id)sender {
-    
-}
 /*
 #pragma mark - Navigation
 

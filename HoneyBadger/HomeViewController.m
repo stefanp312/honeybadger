@@ -88,9 +88,9 @@
 -(void)createHomeFeedCollectionView:(UIView*)addTo{
     
     UICollectionViewFlowLayout* flowBro = [[UICollectionViewFlowLayout alloc] init];
-    flowBro.itemSize = CGSizeMake(addTo.frame.size.width, 200);
+    flowBro.itemSize = CGSizeMake(self.view.frame.size.width, 200);
     flowBro.scrollDirection = UICollectionViewScrollDirectionVertical;
-    flowBro.minimumLineSpacing = 20;
+    flowBro.minimumLineSpacing = 2;
     
     self.pageFeed = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, addTo.frame.size.width, addTo.frame.size.height)collectionViewLayout:flowBro];
     [self.pageFeed registerNib:[UINib nibWithNibName:@"mainFeedPageCell" bundle:nil] forCellWithReuseIdentifier:@"page"];

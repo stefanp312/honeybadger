@@ -22,7 +22,6 @@
 }
 -(void)viewDidLoad{
     
-    self.bodyTextField.delegate = self;
     [self getPrompt];
     
     [self.titleTextField setReturnKeyType:UIReturnKeyDone];
@@ -55,38 +54,16 @@
 
 #pragma mark - UITextViewDelegate
 
--(void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    [self animateTextField:textField up:YES];
-    [textField becomeFirstResponder];
-}
 
--(void)animateTextField:(UITextField*)textField up:(BOOL)up
-{
-    const int movementDistance = -130; // tweak as needed
-    const float movementDuration = 0.3f; // tweak as needed
-    
-    int movement = (up ? movementDistance : -movementDistance);
-    
-    [UIView beginAnimations: @"animateTextField" context: nil];
-    [UIView setAnimationBeginsFromCurrentState: YES];
-    [UIView setAnimationDuration: movementDuration];
-    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-    [UIView commitAnimations];
-}
+
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    
-    [self.bodyTextField resignFirstResponder];
-    [self animateTextField:textField up:NO];
-    
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    return YES;
 }
 
+-(void)textViewDidEndEditing:(UITextView *)textView{
+    [textView resignFirstResponder];
+}
 
 #pragma mark - Actions
 - (IBAction)newPromptAction:(id)sender {
