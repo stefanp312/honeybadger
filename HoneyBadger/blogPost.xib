@@ -39,17 +39,24 @@
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Sample text here." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DN1-QY-6PC">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DN1-QY-6PC">
                             <rect key="frame" x="51" y="208" width="494" height="303"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="303" id="gUC-6n-HqF"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Sample text here.">
+                                    <attributes>
+                                        <font key="NSFont" size="14" name="Verdana"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" lineHeightMultiple="1"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mP-ye-M1Z">
                             <rect key="frame" x="0.0" y="156" width="600" height="2"/>
-                            <color key="backgroundColor" red="0.66666668650000005" green="0.47358431639999998" blue="0.17991733130000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                     </subviews>
                     <gestureRecognizers/>

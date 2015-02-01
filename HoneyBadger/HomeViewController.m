@@ -27,7 +27,7 @@
         
     [scrollView setScrollEnabled:NO];
     
-    //[PFUser logOut];
+    [PFUser logOut];
     PFUser *currentUser = [PFUser currentUser];
     
     if (currentUser) {
