@@ -18,7 +18,6 @@
 
 -(void)viewDidLoad{
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height);
-    [self.scrollView setFrame:CGRectMake(0, 0, self.scrollView.contentSize.width,self.scrollView.contentSize.height)];
     
 }
 - (IBAction)changedContentAction:(UISegmentedControl*)sender {

@@ -10,24 +10,25 @@
 #import "TextViewController.h"
 #import <Parse/Parse.h>
 
-@implementation ComposeViewController 
+@implementation ComposeViewController
 
 -(void)viewDidAppear:(BOOL)animated{
     
-    
     self.tabBarController.title = self.title;
-
+    [self.tabBarController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStyleDone target:self action:@selector(doneBarButtonItemClicked) ] animated:YES];
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [self.tabBarController.navigationItem setRightBarButtonItem:nil animated:YES];
 }
 -(void)viewDidLoad{
     
     self.bodyTextField.delegate = self;
-    self.promptLabel.text = [self getPrompt];
-    [self.tabBarController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStyleDone target:self action:@selector(doneBarButtonItemClicked) ] animated:YES];
+    [self getPrompt];
+    
     [self.titleTextField setReturnKeyType:UIReturnKeyDone];
     [self.subtitileTextField setReturnKeyType:UIReturnKeyDone];
     self.titleTextField.delegate=self;
     self.subtitileTextField.delegate=self;
-    
     
 }
 
@@ -44,21 +45,29 @@
 }
 
 
--(NSString*)getPrompt{
-    NSString* aString = @"YOLO";
-    return aString;
+-(void)getPrompt{
+    [PFCloud callFunctionInBackground:@"getRandomPrompt" withParameters:@{} block:^(id object, NSError *error){
+            self.currentPrompt = object;
+            self.promptLabel.text = [object valueForKey:@"content"];
+    }];
+    
 }
 
 #pragma mark - UITextViewDelegate
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     
-    TextViewController* textViewController = [[TextViewController alloc] initWithNibName:@"TextView" bundle:nil];
-    
-    [self presentViewController:textViewController animated:YES completion:^{
+    TextViewController* textViewController = [[TextViewController alloc] init];
+    [textView resignFirstResponder];
+    //[self.navigationController pushViewController:textViewController animated:YES];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:textViewController];
+    //[nc.navigationBar]
+    [self presentViewController:nc animated:YES completion:^{
+        
         self.bodyTextField.text = textViewController.textView.text;
     }
-     ];
+    ];
+    
     
 }
 
@@ -75,13 +84,17 @@
 
 
 #pragma mark - Actions
+- (IBAction)newPromptAction:(id)sender {
+    [self getPrompt];
+}
 
 - (void)doneBarButtonItemClicked{
     // Dismiss the keyboard by removing it as the first responder.
     [self.bodyTextField resignFirstResponder];
     [self makePost];
-    //[self.tabBarController.navigationItem setRightBarButtonItem:nil animated:YES];
+    
 }
+
 
 - (void)makePost{
     //parse test CODE
@@ -97,23 +110,23 @@
                            };
 
     NSDictionary* prompt = @{
-                             @"promptContent" : self.titleTextField.text,
+                             @"content" : self.promptLabel.text,
                              @"type" : @"Quote",
                              //@"tags" : [NSArray arrayWithObject:@"yolo"],
                              };
 
     NSDictionary* page = @{
-                           @"Title" : self.titleTextField.text,
-                           @"creator" : @"1234",
+                           @"title" : self.titleTextField.text,
+                           @"creator" : @"",
                            @"tags" : @"TestTag",
                            @"coverImg" : @"",
-                           @"promt" : prompt,
+                           @"prompt" : prompt,
                            @"subtitle" : self.subtitileTextField.text,
                            @"textContent" : self.bodyTextField.text,
                            };
     
     
-    [PFCloud callFunctionInBackground:@"createNewPrompt" withParameters:prompt block:^(id object, NSError *error){
+    [PFCloud callFunctionInBackground:@"createNewPost" withParameters:page block:^(id object, NSError *error){
         
     }];
 

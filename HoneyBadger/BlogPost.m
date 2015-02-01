@@ -8,6 +8,7 @@
 
 #import "BlogPost.h"
 
+
 @interface BlogPost ()
 
 @end
@@ -24,15 +25,30 @@
     UIScreenEdgePanGestureRecognizer *rightEdge = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
     rightEdge.edges = UIRectEdgeRight;
     
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget: self action:@selector(doDoubleTap)] ;
+    doubleTap.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:doubleTap];
+    
+    
     [self.view addGestureRecognizer:leftEdge];
     [self.view addGestureRecognizer:rightEdge];
     
-    NSLog(@"%@",self.data);
-    self.mainTitle.text = [self.data valueForKey:@"Title"];
-    self.subTitle.text = [self.data valueForKey:@"Subtitle"];
-
-    self.subTitle.backgroundColor = [UIColor grayColor];
-    self.body.text = [self.data valueForKey:@"Body"];
+    self.mainTitle.text = [self.data valueForKey:@"title"];
+    self.subTitle.text = [self.data valueForKey:@"subtitle"];
+    self.mainTitle.layer.cornerRadius = 5;
+    self.subTitle.layer.cornerRadius = 5;
+    self.mainTitle.layer.borderWidth = 10;
+    self.subTitle.layer.borderWidth = 10;
+    self.mainTitle.layer.borderColor = self.mainTitle.backgroundColor.CGColor;
+    //self.mainTitle.layer.layer =
+    self.subTitle.layer.borderColor = self.subTitle.backgroundColor.CGColor;
+    [self.mainTitle.layer setMasksToBounds:YES];
+    [self.subTitle.layer setMasksToBounds:YES];
+    self.body.text = [self.data valueForKey:@"textContent"];
+    //[self.textView sizeToFit];
+    
+    
+    
     
 
     
@@ -50,6 +66,14 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+
+- (void) doDoubleTap{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
 - (IBAction)handleEdgePan:(id)sender {
     
 }

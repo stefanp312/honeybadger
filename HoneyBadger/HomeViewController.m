@@ -1,4 +1,4 @@
-//
+    //
 //  HomeViewController.m
 //  HoneyBadger
 //
@@ -10,20 +10,39 @@
 #import "MainFeedPageCell.h"
 #import "blogPost.h"
 #import <Parse/Parse.h>
+#import "LoginController.h"
 
 @implementation HomeViewController
 
 -(void)viewDidLoad{
     
-    UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationController.navigationBar.frame), self.view.frame.size.width,self.view.frame.size.height-self.navigationController.navigationBar.frame.size.height-self.tabBarController.tabBar.frame.size.height)];
+    //[self initPageArray];
+    self.pagesViewed=[NSNumber numberWithInt:5];
+    [self refreshPageArray];
+      UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationController.navigationBar.frame), self.view.frame.size.width,self.view.frame.size.height-self.navigationController.navigationBar.frame.size.height-self.tabBarController.tabBar.frame.size.height)];
     scrollView.backgroundColor = [UIColor brownColor];
     [self.view addSubview:scrollView];
     [self createHomeFeedCollectionView:scrollView];
-    [self initPageArray];
     
         
     [scrollView setScrollEnabled:NO];
-    //scrollView.backgroundColor = [UIColor colorWithRed:(150/255) green:(121/255) blue:(105/255) alpha:1];
+    
+    //[PFUser logOut];
+    PFUser *currentUser = [PFUser currentUser];
+    
+    if (currentUser) {
+        // do stuff with the user
+        [currentUser pinInBackground];
+        NSLog(@"Welcome %@",currentUser.username);
+    }
+    else {
+        // show the signup or login screen
+        LoginController *login = [[LoginController alloc]initWithNibName:@"Login" bundle:nil];
+        NSLog(@"loginman");
+        [self presentViewController:login animated:YES completion: ^{
+                    }];
+    }
+    
 
 }
 
@@ -38,10 +57,10 @@
 -(void)initPageArray{
     
     NSDictionary* myPage = @{
-                           @"Title": @"That Title Man",
-                           @"Subtitle": @"Wow Header Too",
-                           @"Image": @1,
-                           @"Body": @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam felis tortor, lacinia id malesuada sagittis, sodales non nulla. Ut aliquam, nibh eu laoreet tincidunt, orci mauris fermentum massa, id lobortis dui dui vitae diam. Nulla commodo efficitur ante at dignissim. In quam nulla, tristique non congue a, rutrum in odio. Donec non dignissim risus, quis iaculis arcu. Nullam feugiat, justo sit amet interdum bibendum, nibh erat vestibulum risus, ac faucibus enim lorem id ante. Curabitur at ante vulputate, auctor ligula quis, fermentum lacus. Curabitur egestas bibendum lectus id pretium. Quisque sollicitudin ultricies libero, eu ornare velit blandit posuere. Phasellus in accumsan risus. Phasellus at metus erat. Nulla quis tortor non erat facilisis fermentum."
+                           @"title": @"That Title Man",
+                           @"subtitle": @"Wow Header Too",
+                           @"image": @1,
+                           @"textContent": @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam felis tortor, lacinia id malesuada sagittis, sodales non nulla. Ut aliquam, nibh eu laoreet tincidunt, orci mauris fermentum massa, id lobortis dui dui vitae diam. Nulla commodo efficitur ante at dignissim. In quam nulla, tristique non congue a, rutrum in odio. Donec non dignissim risus, quis iaculis arcu. Nullam feugiat, justo sit amet interdum bibendum, nibh erat vestibulum risus, ac faucibus enim lorem id ante. Curabitur at ante vulputate, auctor ligula quis, fermentum lacus. Curabitur egestas bibendum lectus id pretium. Quisque sollicitudin ultricies libero, eu ornare velit blandit posuere. Phasellus in accumsan risus. Phasellus at metus erat. Nulla quis tortor non erat facilisis fermentum."
                            };
     self.pageArray = [NSArray arrayWithObjects:myPage,myPage,myPage, nil].mutableCopy;
 
@@ -49,14 +68,16 @@
 
 -(void)refreshPageArray{
     
-    NSDictionary* myPage = @{
-                             @"Title": @"That Title Man",
-                             @"Subtitle": @"Wow Header Too",
-                             @"Image": @1,
-                             @"Body": @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam felis tortor, lacinia id malesuada sagittis, sodales non nulla. Ut aliquam, nibh eu laoreet tincidunt, orci mauris fermentum massa, id lobortis dui dui vitae diam. Nulla commodo efficitur ante at dignissim. In quam nulla, tristique non congue a, rutrum in odio. Donec non dignissim risus, quis iaculis arcu. Nullam feugiat, justo sit amet interdum bibendum, nibh erat vestibulum risus, ac faucibus enim lorem id ante. Curabitur at ante vulputate, auctor ligula quis, fermentum lacus. Curabitur egestas bibendum lectus id pretium. Quisque sollicitudin ultricies libero, eu ornare velit blandit posuere. Phasellus in accumsan risus. Phasellus at metus erat. Nulla quis tortor non erat facilisis fermentum."
-                             };
-
-    self.pageArray = [NSArray arrayWithObjects:myPage,myPage,myPage, nil].mutableCopy;
+    [PFCloud callFunctionInBackground:@"aggregateBlogs" withParameters:@{@"limit":self.pagesViewed} block:^(NSArray* array, NSError *error){
+        self.pageArray=array.mutableCopy;
+        NSLog(@"%@",error);
+        [self.pageFeed reloadData];
+        self.pagesViewed=[NSNumber numberWithInt:[self.pagesViewed intValue]+2];
+    }];
+    
+    
+    
+    
     
 }
 
@@ -93,16 +114,16 @@
     pageCell.backgroundColor = [UIColor whiteColor];
     pageCell.layer.borderWidth = 1;
     pageCell.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    pageCell.title.text = [[self.pageArray objectAtIndex:indexPath.row] valueForKey:@"Title"];
-    pageCell.subTitle.text = [[self.pageArray objectAtIndex:indexPath.row] valueForKey:@"Subtitle"];
+    pageCell.title.text = [[self.pageArray objectAtIndex:indexPath.row] valueForKey:@"title"];
+    pageCell.subTitle.text = [[self.pageArray objectAtIndex:indexPath.row] valueForKey:@"subtitle"];
     
     return ((UICollectionViewCell*)pageCell);
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     self.currentPost = [[BlogPost alloc]initWithNibName:@"blogPost" bundle:nil];
+    //UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:self.currentPost];
     self.currentPost.data = [self.pageArray objectAtIndex:indexPath.row] ;
-    NSLog(@"working");
     [self presentViewController:self.currentPost animated:YES completion:nil];
     //custom animations could happen here if there is time
 }
@@ -110,7 +131,9 @@
     return 1;
 }
 
-
+-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    [self refreshPageArray];
+}
 
 
 

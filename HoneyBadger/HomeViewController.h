@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BlogPost.h"
 
-@interface HomeViewController : UIViewController <UICollectionViewDataSource,UICollectionViewDelegate>
+@interface HomeViewController : UIViewController <UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
 
 @property UICollectionView* pageFeed;
 @property UICollectionViewCell* pageFeedCells;
@@ -20,5 +20,8 @@
 
 @property BlogPost* currentPost;
 
+@property UIScrollView* scrollView;
+
+@property NSNumber* pagesViewed;
 
 @end

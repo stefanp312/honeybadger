@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		339A7BE61A7E309900465C99 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339A7BE51A7E309900465C99 /* Login.xib */; };
+		339A7BE91A7E31C400465C99 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339A7BE81A7E31C400465C99 /* LoginController.m */; };
 		33CCB5461A7CA8E600458057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5451A7CA8E600458057 /* main.m */; };
 		33CCB5491A7CA8E600458057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB5481A7CA8E600458057 /* AppDelegate.m */; };
 		33CCB5521A7CA8E600458057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5501A7CA8E600458057 /* Main.storyboard */; };
@@ -24,7 +26,6 @@
 		33CCB58F1A7D27EC00458057 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB58E1A7D27EC00458057 /* BlogPost.m */; };
 		33CCB5911A7D343B00458057 /* blogPost.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCB5901A7D343B00458057 /* blogPost.xib */; };
 		33CE32BE1A7D6FB600A15B03 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CE32BD1A7D6FB600A15B03 /* TextViewController.m */; };
-		33CE32C81A7DA0D200A15B03 /* TextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CE32C71A7DA0D200A15B03 /* TextView.xib */; };
 		33D747721A7DBCD1002CF876 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D7476D1A7DBCD1002CF876 /* Bolts.framework */; };
 		33D747731A7DBCD1002CF876 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D7476E1A7DBCD1002CF876 /* Parse.framework */; };
 		33D747741A7DBCD1002CF876 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D7476F1A7DBCD1002CF876 /* ParseCrashReporting.framework */; };
@@ -54,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		339A7BE51A7E309900465C99 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
+		339A7BE71A7E31C400465C99 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		339A7BE81A7E31C400465C99 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		33CCB5401A7CA8E600458057 /* HoneyBadger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoneyBadger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CCB5441A7CA8E600458057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CCB5451A7CA8E600458057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,7 +89,6 @@
 		33CCB5901A7D343B00458057 /* blogPost.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = blogPost.xib; sourceTree = "<group>"; };
 		33CE32BC1A7D6FB600A15B03 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		33CE32BD1A7D6FB600A15B03 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
-		33CE32C71A7DA0D200A15B03 /* TextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextView.xib; sourceTree = "<group>"; };
 		33D7476D1A7DBCD1002CF876 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		33D7476E1A7DBCD1002CF876 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		33D7476F1A7DBCD1002CF876 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -237,9 +240,11 @@
 				33CCB5901A7D343B00458057 /* blogPost.xib */,
 				33CCB58D1A7D27EC00458057 /* BlogPost.h */,
 				33CCB58E1A7D27EC00458057 /* BlogPost.m */,
-				33CE32C71A7DA0D200A15B03 /* TextView.xib */,
 				33CE32BC1A7D6FB600A15B03 /* TextViewController.h */,
 				33CE32BD1A7D6FB600A15B03 /* TextViewController.m */,
+				339A7BE51A7E309900465C99 /* Login.xib */,
+				339A7BE71A7E31C400465C99 /* LoginController.h */,
+				339A7BE81A7E31C400465C99 /* LoginController.m */,
 			);
 			name = HelperViews;
 			sourceTree = "<group>";
@@ -339,7 +344,7 @@
 				33CCB5521A7CA8E600458057 /* Main.storyboard in Resources */,
 				33CCB5571A7CA8E600458057 /* LaunchScreen.xib in Resources */,
 				33CCB5541A7CA8E600458057 /* Images.xcassets in Resources */,
-				33CE32C81A7DA0D200A15B03 /* TextView.xib in Resources */,
+				339A7BE61A7E309900465C99 /* Login.xib in Resources */,
 				33CCB5911A7D343B00458057 /* blogPost.xib in Resources */,
 				33CCB58A1A7D192500458057 /* mainFeedPageCell.xib in Resources */,
 			);
@@ -364,6 +369,7 @@
 				33CCB5821A7D0D3200458057 /* MainFeedPageCell.m in Sources */,
 				33CCB5461A7CA8E600458057 /* main.m in Sources */,
 				33CCB57A1A7CC0BD00458057 /* SettingViewController.m in Sources */,
+				339A7BE91A7E31C400465C99 /* LoginController.m in Sources */,
 				33CCB5771A7CC09100458057 /* ComposeViewController.m in Sources */,
 				33CCB5711A7CBA7800458057 /* HomeViewController.m in Sources */,
 				33CCB57D1A7CC0F500458057 /* SearchViewController.m in Sources */,

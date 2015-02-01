@@ -13,10 +13,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *subtitileTextField;
 @property (weak, nonatomic) IBOutlet UITextView *bodyTextField;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+
 
 @property BOOL hasTitle;
 @property BOOL hasSubtitle;
 @property BOOL hasBody;
+@property NSDictionary* currentPrompt;
 
 
 
