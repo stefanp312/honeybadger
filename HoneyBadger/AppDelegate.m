@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +18,57 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios_guide#localdatastore/iOS
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"2aUMMAZ9FGKpLa8Uesnb9BBQPQxon5vF2IfOyO6U"
+                  clientKey:@"WsXianDNzcvcastJHR9fCTW3ZfjAGDgTB0gSNQsX"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        // do stuff with the user
+        [currentUser pinInBackground];
+    } else {
+        // show the signup or login screen
+        [PFUser logInWithUsernameInBackground:@"username" password:@"password"
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (user) {
+                                                // Do stuff after successful login.
+                                                NSLog(@"win");
+                                            } else {
+                                                // The login failed. Check error to see why.
+                                                NSLog(@"%@",error);
+                                            }
+                                        }];
+    }
+    
+    // ...
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "MainFeedPageCell.h"
 #import "blogPost.h"
+#import <Parse/Parse.h>
 
 @implementation HomeViewController
 
@@ -20,6 +21,7 @@
     [self createHomeFeedCollectionView:scrollView];
     [self initPageArray];
     
+        
     [scrollView setScrollEnabled:NO];
     //scrollView.backgroundColor = [UIColor colorWithRed:(150/255) green:(121/255) blue:(105/255) alpha:1];
 

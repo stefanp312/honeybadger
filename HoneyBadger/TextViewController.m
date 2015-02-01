@@ -17,9 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.textView = [[UITextView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
-    [self.view addSubview:self.textView];
     
+    
+}
+- (IBAction)doneAction:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

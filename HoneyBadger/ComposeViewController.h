@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ComposeViewController : UIViewController <UITextViewDelegate>
+@interface ComposeViewController : UIViewController <UITextFieldDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *promptLabel;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *subtitileTextField;

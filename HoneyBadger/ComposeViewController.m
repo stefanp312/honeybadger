@@ -7,6 +7,8 @@
 //
 
 #import "ComposeViewController.h"
+#import "TextViewController.h"
+#import <Parse/Parse.h>
 
 @implementation ComposeViewController 
 
@@ -14,11 +16,18 @@
     
     
     self.tabBarController.title = self.title;
+
+}
+-(void)viewDidLoad{
+    
     self.bodyTextField.delegate = self;
     self.promptLabel.text = [self getPrompt];
-    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(nextBarButtonItemClicked)];
-
-
+    [self.tabBarController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStyleDone target:self action:@selector(doneBarButtonItemClicked) ] animated:YES];
+    [self.titleTextField setReturnKeyType:UIReturnKeyDone];
+    [self.subtitileTextField setReturnKeyType:UIReturnKeyDone];
+    self.titleTextField.delegate=self;
+    self.subtitileTextField.delegate=self;
+    
     
 }
 
@@ -27,13 +36,11 @@
     if (![sender.text isEqualToString:@""]) {
         self.hasTitle=true;
     }
-    [sender resignFirstResponder];
 }
 - (IBAction)hasSubtitle:(UITextField *)sender {
     if (![sender.text isEqualToString:@""]) {
         self.hasSubtitle=true;
     }
-    [sender resignFirstResponder];
 }
 
 
@@ -46,26 +53,70 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     
+    TextViewController* textViewController = [[TextViewController alloc] initWithNibName:@"TextView" bundle:nil];
+    
+    [self presentViewController:textViewController animated:YES completion:^{
+        self.bodyTextField.text = textViewController.textView.text;
+    }
+     ];
+    
 }
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    [self.bodyTextField resignFirstResponder];
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 #pragma mark - Actions
 
 - (void)doneBarButtonItemClicked{
     // Dismiss the keyboard by removing it as the first responder.
     [self.bodyTextField resignFirstResponder];
-    
-    [self.tabBarController.navigationItem setRightBarButtonItem:nil animated:YES];
-}
-- (void)nextBarButtonItemClicked{
-    // Dismiss the keyboard by removing it as the first responder.
-
-    
-    if ((self.hasSubtitle)&&(self.hasTitle)) {
-        [self.tabBarController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStyleDone target:self action:@selector(doneBarButtonItemClicked)]
- animated:YES];
-    }
-    
+    [self makePost];
+    //[self.tabBarController.navigationItem setRightBarButtonItem:nil animated:YES];
 }
 
+- (void)makePost{
+    //parse test CODE
+    
+    NSDictionary* user = @{
+                           @"password" : @"password",
+                           @"username" : @"username",
+                           @"emailVerified" : @YES,
+                           @"coverImg" : @"",
+                           @"email" : @"stefanpleava@gmail.com",
+                           @"tagLine" : @"Have a great day mate!",
+                           @"account" : self.bodyTextField.text,
+                           };
+
+    NSDictionary* prompt = @{
+                             @"promptContent" : self.titleTextField.text,
+                             @"type" : @"Quote",
+                             //@"tags" : [NSArray arrayWithObject:@"yolo"],
+                             };
+
+    NSDictionary* page = @{
+                           @"Title" : self.titleTextField.text,
+                           @"creator" : @"1234",
+                           @"tags" : @"TestTag",
+                           @"coverImg" : @"",
+                           @"promt" : prompt,
+                           @"subtitle" : self.subtitileTextField.text,
+                           @"textContent" : self.bodyTextField.text,
+                           };
+    
+    
+    [PFCloud callFunctionInBackground:@"createNewPrompt" withParameters:prompt block:^(id object, NSError *error){
+        
+    }];
+
+}
 
 @end
